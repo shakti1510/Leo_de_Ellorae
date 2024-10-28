@@ -79,12 +79,13 @@ body {
 }
 /* Header styles */
 header {
-  background-color: #e021ba;
+  background-color: #d7d7d7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   /* border-radius: 20% 10%; */
   top: 0;
   z-index: 10000;
+  /* opacity: 0; */
   /* width: 97%;
   margin-left: 1.5%; */
 }
@@ -429,6 +430,7 @@ footer .container {
 .social-links a {
   color: #fff;
   margin-left: 1rem;
+  padding: -0.5rem;
   transition: color 0.3s ease-in-out;
 }
 
@@ -437,7 +439,7 @@ footer .container {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .cta-buttons {
     flex-direction: column;
   }

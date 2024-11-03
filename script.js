@@ -18,6 +18,26 @@ const sendMail = () => {
     .catch((err) => console.log(err));
 };
 
+feather.replace();
+
+// GSAP animations
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate work items
+gsap.utils.toArray(".work-item").forEach((item, i) => {
+  gsap.from(item, {
+    x: i % 2 === 0 ? -60 : 60,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: item,
+      start: "top bottom-=75",
+      end: "top center",
+      scrub: true,
+    },
+  });
+});
+
 // Glitch effect
 const glitchElement = document.querySelector(".glitch");
 setInterval(() => {
